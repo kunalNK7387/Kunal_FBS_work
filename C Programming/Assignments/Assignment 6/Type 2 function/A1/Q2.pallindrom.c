@@ -1,0 +1,30 @@
+#include<stdio.h>
+int pallindrome();
+void main() {
+	int a=pallindrome();
+	if(a==1) {
+
+		printf("The the is pallindrome.");
+	} else {
+		printf("The number is not pallindrome.");
+	}
+
+}
+int pallindrome() {
+
+	int a;
+	printf("Enter 3 digit number only:");
+	scanf("%d",& a);
+	int rev, r1,r2,r3,q1;
+	r3= a % 10;
+	q1= a / 10;
+	r2= q1 % 10;
+	r1= q1 / 10;
+
+	rev = (r3*100) +(r2*10) + (r1);
+	if(rev==a) {
+		return 1;
+
+
+	}
+}
